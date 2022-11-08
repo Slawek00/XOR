@@ -31,8 +31,6 @@ function replaceChars(tab, findElement, newChars){
         let i = tab.indexOf(findElement);
         tab[i] = newChars;
     }
-    
-    return tab;
 }
 
 let C0 = '3C0712020A4C1E16481909060D004D493E0C1113184E210B0C1A0A1B0149522D011A1A1C0E4E331E0A00041C1C19434C081D0C4D2C151A0C0C0F543B06030419000F0C4A49020D06170C12110C45041D4908181348091E021C18491A060904040D0B09041A1D4308121D1A030B0E0C1E1C';
@@ -41,12 +39,15 @@ let C2 = '3F4F3250224C2E53274D35543C453A413D492F492D4E214420432A502045264521542F
 
 const result = xor(convertToASCII(C2),convertToASCII(C0));
 const result2 =xor(convertToASCII(C2),convertToASCII(C1));
-//const newresult = replaceChars(result, 72, 104);
-//const newresults = replaceChars(newresult, 0, 32); tests
+
+
+for(let i = 0; i < result.length; i++){
+    replaceChars(result, 72, 104);
+    //replaceChars(result, 0, 32);
+}
 
 
 
-console.log(ascii_to_string(newresults));
-
+console.log(ascii_to_string(result));
 
 
