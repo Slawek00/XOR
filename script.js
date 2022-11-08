@@ -41,10 +41,12 @@ let C2 = '3F4F3250224C2E53274D35543C453A413D492F492D4E214420432A502045264521542F
 
 const result = xor(convertToASCII(C2),convertToASCII(C0));
 const result2 =xor(convertToASCII(C2),convertToASCII(C1));
-const newresult = replaceChars(result, 72, 104);
+//const newresult = replaceChars(result, 72, 104);
+//const newresults = replaceChars(newresult, 0, 32); tests
 
-console.log(ascii_to_string(newresult));
-console.log(ascii_to_string(result2));
+
+
+console.log(ascii_to_string(newresults));
 
 
 
